@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import matplotlib as mpl
 from matplotlib import pyplot
 from indexes import ColumnKey
 
@@ -16,8 +15,6 @@ keys = [0, 4, 5]
 for v in excel:
     for i in range(0, len(keys)):
         v[keys[i]] = ColumnKey[keys[i]].index(str(v[keys[i]]))
-
-print(excel)
 
 lookup = [
     [4],
@@ -58,7 +55,7 @@ for i in range(0, len(lookup)):
     for j in range(0, len(categories[i])):
         for k in range(0, len(lookup[i])):
             if categories[i][j][0] == lookup[i][k]:
-                new[i][k] = int(new[i][k]  + 1)
+                new[i][k] = int(new[i][k] + 1)
 
 chartinfo = [
     {
